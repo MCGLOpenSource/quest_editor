@@ -128,8 +128,8 @@ class QuestEditor {
     for (const type in protocol.types)
       if (type !== 'ANY') this.typeSelector.element.options.add(new Option(type, type));
 
-    for (const npcname of protocol.npcnames)
-      this.npcnameSelector.element.options.add(new Option(npcname[0], npcname[1]));
+    for (const npcname in protocol.npcnames)
+      this.npcnameSelector.element.options.add(new Option(protocol.npcnames[npcname].name, npcname));
 
     this.onTypeChanged('GLOBAL');
   }
@@ -153,11 +153,11 @@ class QuestEditor {
       // Property value input field (or checkbox, if property requires it)
       const subwrapper = new Builder('div', 'flex-row-container').style('align-items', 'center');
 
-      const input = new Builder('input').attr('name', property.name).attr('type', property.checkbox ? 'checkbox' : 'text');
+      const input = new Builder('input').attr('name', property.name).attr('type', property.type === 1 ? 'checkbox' : 'text');
       if (input.element.getAttribute('type') === 'text') input.style('width', '160px');
       subwrapper.append(input);
 
-      if (!property.checkbox && property.editor) {
+      if (property.type === 2) {
         const button = new Builder('button', this);
         button.attr('onclick', 'this.owner.openExternalEditor(this.parentElement.parentElement);');
         button.style('width', '32px');
@@ -175,7 +175,8 @@ class QuestEditor {
       // Property description
       if (this.descriptionVisibilityToggler.element.checked) {
         const wrapper = new Builder('div').style('line-height', '0.85');
-        wrapper.append(new Builder('i', 'editor-description').text(property.description === '' ? '(не указано)' : `- ${property.description}`));
+        wrapper.append(new Builder('i', 'editor-description')
+            .text((property.description === '' || property.description === undefined) ? '(не указано)' : `- ${property.description}`));
 
         this.availableProperties.append(wrapper);
       }

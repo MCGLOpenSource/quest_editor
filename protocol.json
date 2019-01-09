@@ -18,26 +18,26 @@
       },
       "nofixend": {
         "description": "",
-        "checkbox": true
+        "type": 1
       },
       "allworlds": {
         "description": "",
-        "checkbox": true
+        "type": 1
       }
     },
 
     "ANY": {
       "title": {
         "description": "Заголовок этапа",
-        "editor": true
+        "type": 2
       },
       "about": {
         "description": "Краткое описание этапа",
-        "editor": true
+        "type": 2
       },
       "postmessage": {
         "description": "",
-        "editor": true
+        "type": 2
       },
       "clritem": {
         "description": ""
@@ -82,15 +82,19 @@
         "description": "Количество блоков, которое необходимо пройти по оси Z"
       },
       "fromcurrentposition": {
-        "description": "Относительность текущей позиции"
+        "description": "Относительность текущей позиции",
+        "type": 1
       },
       "definitely": {
-        "description": ""
+        "description": "",
+        "type": 1
       },
     }
   },
 
-  "npcnames": [
-    [ "Землелюб", "dirtlover" ]
-  ]
+  "npcnames": {
+    "dirtlover": {
+      "name": "Землелюб"
+    }
+  }
 }
