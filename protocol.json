@@ -1,0 +1,96 @@
+{
+  "types": {
+    "GLOBAL": {
+      "crossid": {
+        "description": ""
+      },
+      "qtype": {
+        "description": ""
+      },
+      "completecount": {
+        "description": ""
+      },
+      "prevquests": {
+        "description": ""
+      },
+      "prevquestabout": {
+        "description": ""
+      },
+      "nofixend": {
+        "description": "",
+        "checkbox": true
+      },
+      "allworlds": {
+        "description": "",
+        "checkbox": true
+      }
+    },
+
+    "ANY": {
+      "title": {
+        "description": "Заголовок этапа",
+        "editor": true
+      },
+      "about": {
+        "description": "Краткое описание этапа",
+        "editor": true
+      },
+      "postmessage": {
+        "description": "",
+        "editor": true
+      },
+      "clritem": {
+        "description": ""
+      },
+      "giveitem": {
+        "description": ""
+      },
+      "giveentity": {
+        "description": ""
+      },
+      "givepos": {
+        "description": ""
+      },
+      "givehealth": {
+        "description": ""
+      },
+      "create": {
+        "description": ""
+      },
+      "delay": {
+        "description": ""
+      },
+      "addbuff": {
+        "description": ""
+      }
+    },
+
+    "INFO": {
+      "wait": {
+        "description": "Время ожидания"
+      }
+    },
+
+    "MOVE": {
+      "movex": {
+        "description": "Количество блоков, которое необходимо пройти по оси X"
+      },
+      "movey": {
+        "description": "Количество блоков, которое необходимо пройти по оси Y"
+      },
+      "movez": {
+        "description": "Количество блоков, которое необходимо пройти по оси Z"
+      },
+      "fromcurrentposition": {
+        "description": "Относительность текущей позиции"
+      },
+      "definitely": {
+        "description": ""
+      },
+    }
+  },
+
+  "npcnames": [
+    [ "Землелюб", "dirtlover" ]
+  ]
+}
